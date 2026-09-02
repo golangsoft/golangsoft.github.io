@@ -392,16 +392,10 @@ body.nav-open .menu-toggle__bar:nth-child(4) {
   width: min(720px, 150%);
   max-width: none;
   margin: 0;
-  opacity: 0.96;
-  mix-blend-mode: screen;
-  -webkit-mask-image:
-    radial-gradient(ellipse 68% 66% at 56% 48%, #000 36%, transparent 72%),
-    linear-gradient(90deg, transparent 0%, #000 16%, #000 100%);
-  -webkit-mask-composite: destination-in;
-  mask-image:
-    radial-gradient(ellipse 68% 66% at 56% 48%, #000 36%, transparent 72%),
-    linear-gradient(90deg, transparent 0%, #000 16%, #000 100%);
-  mask-composite: intersect;
+  opacity: 1;
+  mix-blend-mode: normal;
+  -webkit-mask-image: radial-gradient(ellipse 90% 88% at 50% 48%, #000 56%, transparent 100%);
+  mask-image: radial-gradient(ellipse 90% 88% at 50% 48%, #000 56%, transparent 100%);
 }
 
 .pill-row {
@@ -964,10 +958,11 @@ body.nav-open .menu-toggle__bar:nth-child(4) {
   .hero__visual img {
     width: min(560px, 150%);
     max-width: none;
-    opacity: 0.96;
-    mix-blend-mode: screen;
-    -webkit-mask-image: radial-gradient(ellipse 74% 72% at 50% 48%, #000 38%, transparent 78%);
-    mask-image: radial-gradient(ellipse 74% 72% at 50% 48%, #000 38%, transparent 78%);
+    opacity: 1;
+    mix-blend-mode: normal;
+    -webkit-mask-image: none;
+    mask-image: none;
+    filter: drop-shadow(0 12px 40px rgba(0, 140, 255, 0.22));
   }
 
   .cta__inner {
