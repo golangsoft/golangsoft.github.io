@@ -882,6 +882,45 @@ body.nav-open .menu-toggle__bar:nth-child(4) {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
+  .footer__brand {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer__brand .brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 8px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer__brand .brand__mark {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer__brand p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .footer__email {
+    grid-column: 1 / -1;
+    text-align: center;
+  }
+
+  .footer__email a {
+    justify-content: center;
+  }
+
   .tech-grid {
     display: flex;
     flex-wrap: wrap;
@@ -938,8 +977,7 @@ body.nav-open .menu-toggle__bar:nth-child(4) {
   }
 
   .hero__grid,
-  .projects,
-  .footer__grid {
+  .projects {
     grid-template-columns: 1fr;
   }
 
@@ -1053,8 +1091,7 @@ body.nav-open .menu-toggle__bar:nth-child(4) {
 @media (max-width: 480px) {
   .cards,
   .pill-row,
-  .stats,
-  .footer__grid {
+  .stats {
     grid-template-columns: 1fr;
   }
 }
