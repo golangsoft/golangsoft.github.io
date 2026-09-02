@@ -122,7 +122,9 @@ footer {
 .brand__mark {
   width: 40px;
   height: 40px;
-  filter: drop-shadow(0 0 10px rgba(0, 210, 255, 0.45));
+  background: transparent;
+  overflow: visible;
+  filter: drop-shadow(0 0 8px rgba(0, 210, 255, 0.55));
 }
 
 .brand__word {
@@ -364,6 +366,7 @@ body.nav-open .menu-toggle__bar:nth-child(4) {
   overflow: hidden;
   clip-path: inset(0);
   pointer-events: none;
+  mix-blend-mode: screen;
 }
 
 .hero__orb {
@@ -383,7 +386,6 @@ body.nav-open .menu-toggle__bar:nth-child(4) {
   max-width: none;
   margin: 0;
   opacity: 0.96;
-  mix-blend-mode: screen;
   -webkit-mask-image:
     radial-gradient(ellipse 68% 66% at 56% 48%, #000 36%, transparent 72%),
     linear-gradient(90deg, transparent 0%, #000 16%, #000 100%);
@@ -907,14 +909,34 @@ body.nav-open .menu-toggle__bar:nth-child(4) {
   .hero__visual {
     margin: 0;
     pointer-events: auto;
+    overflow: visible;
+    clip-path: none;
   }
 
   .hero__visual img {
-    width: min(420px, 100%);
+    width: min(380px, 92%);
     max-width: 100%;
-    opacity: 1;
-    -webkit-mask-image: none;
-    mask-image: none;
+    opacity: 0.96;
+    -webkit-mask-image: radial-gradient(circle at 50% 46%, #000 40%, transparent 72%);
+    mask-image: radial-gradient(circle at 50% 46%, #000 40%, transparent 72%);
+    -webkit-mask-composite: source-in;
+    mask-composite: intersect;
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px 12px;
+  }
+
+  .tech-grid li:last-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 50%;
+  }
+
+  .tech-grid img {
+    width: 72px;
+    height: 58px;
   }
 
   .cta__inner {
@@ -944,11 +966,13 @@ body.nav-open .menu-toggle__bar:nth-child(4) {
   .pill-row,
   .stats,
   .tech-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .tech-grid li:last-child {
     grid-column: 1 / -1;
+    justify-self: center;
+    width: 50%;
   }
 
   .pill-row {
@@ -974,6 +998,16 @@ body.nav-open .menu-toggle__bar:nth-child(4) {
   .stats,
   .footer__grid {
     grid-template-columns: 1fr;
+  }
+
+  .tech-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tech-grid li:last-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 50%;
   }
 }
 
