@@ -719,8 +719,9 @@ body.nav-open .menu-toggle__bar:nth-child(4) {
 .footer__bar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 16px;
-  padding-top: 22px;
+  padding: 22px 0 8px;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
   color: #6e7d99;
   font-size: 13px;
@@ -731,9 +732,18 @@ body.nav-open .menu-toggle__bar:nth-child(4) {
   color: #6e7d99;
 }
 
-.footer__bar span {
-  margin: 0 8px;
-  color: #4d5c77;
+.footer__legal {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+.footer__legal a {
+  color: #6e7d99;
+}
+
+.footer__legal a:hover {
+  color: var(--cyan);
 }
 
 .modal[hidden] {

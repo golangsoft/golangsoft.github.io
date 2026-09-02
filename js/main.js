@@ -5,12 +5,7 @@
   const modal = document.getElementById("contactModal");
   const form = document.getElementById("contactForm");
   const status = document.getElementById("formStatus");
-  const year = document.getElementById("year");
   const links = Array.from(document.querySelectorAll(".nav__link"));
-
-  if (year) {
-    year.textContent = String(new Date().getFullYear());
-  }
 
   const onScroll = () => {
     header.classList.toggle("is-scrolled", window.scrollY > 12);
