@@ -11,6 +11,9 @@
     header.classList.toggle("is-scrolled", window.scrollY > 12);
   };
 
+  const year = document.getElementById("year");
+  if (year) year.textContent = String(new Date().getFullYear());
+
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
