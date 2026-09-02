@@ -129,8 +129,6 @@ footer {
   height: 40px;
   object-fit: cover;
   object-position: center;
-  border-radius: 8px;
-  filter: drop-shadow(0 0 10px rgba(0, 232, 180, 0.35));
 }
 
 .brand__word {
@@ -921,16 +919,26 @@ body.nav-open .menu-toggle__bar:nth-child(4) {
   }
 
   .hero__visual {
-    margin: 0;
-    pointer-events: auto;
+    margin: -12px -28px 8px;
+    overflow: visible;
+    clip-path: none;
+    pointer-events: none;
+  }
+
+  .hero__orb {
+    width: 88%;
+    left: 6%;
+    top: 10%;
+    background: radial-gradient(circle, rgba(0, 180, 255, 0.2), rgba(0, 232, 180, 0.08) 42%, transparent 70%);
   }
 
   .hero__visual img {
-    width: min(420px, 100%);
-    max-width: 100%;
-    opacity: 1;
-    -webkit-mask-image: none;
-    mask-image: none;
+    width: min(560px, 150%);
+    max-width: none;
+    opacity: 0.96;
+    mix-blend-mode: screen;
+    -webkit-mask-image: radial-gradient(ellipse 74% 72% at 50% 48%, #000 38%, transparent 78%);
+    mask-image: radial-gradient(ellipse 74% 72% at 50% 48%, #000 38%, transparent 78%);
   }
 
   .cta__inner {
