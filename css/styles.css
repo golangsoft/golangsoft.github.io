@@ -947,6 +947,10 @@ body.nav-open .menu-toggle__bar:nth-child(4) {
     grid-template-columns: 1fr 1fr;
   }
 
+  .tech-grid li:last-child {
+    grid-column: 1 / -1;
+  }
+
   .pill-row {
     justify-items: start;
   }
@@ -968,7 +972,6 @@ body.nav-open .menu-toggle__bar:nth-child(4) {
   .cards,
   .pill-row,
   .stats,
-  .tech-grid,
   .footer__grid {
     grid-template-columns: 1fr;
   }
