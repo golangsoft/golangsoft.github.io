@@ -726,7 +726,7 @@ body.nav-open .menu-toggle__bar:nth-child(4) {
   display: flex;
   align-items: center;
   gap: 8px;
-  color: var(--teal);
+  color: var(--cyan);
   font-weight: 600;
 }
 
